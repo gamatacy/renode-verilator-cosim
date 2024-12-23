@@ -1,0 +1,20 @@
+--- apb3.cpp	2024-12-23 17:06:32.577648800 +0300
++++ renode/src/Plugins/CoSimulationPlugin/IntegrationLibrary/src/buses/apb3.cpp	2024-12-08 23:03:50.290109000 +0300
+@@ -37,6 +37,8 @@
+ 
+ void APB3::write(int width, uint64_t addr, uint64_t value)
+ {
++    width = 4;
++    printf("APB3 WRITE\n");
+     if(width != 4) {
+         char msg[] = "APB3 implementation only handles 4-byte accesses, tried %d"; // we sprintf to self, because width is never longer than 2 digits
+         sprintf(msg, msg, width);
+@@ -63,6 +65,8 @@
+ 
+ uint64_t APB3::read(int width, uint64_t addr)
+ {
++    width = 4;
++    printf("APB3 READ\n");
+     if(width != 4) {
+         char msg[] = "APB3 implementation only handles 4-byte accesses, tried %d"; // we sprintf to self, because width is never longer than 2 digits
+         sprintf(msg, msg, width);

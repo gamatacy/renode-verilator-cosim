@@ -1,0 +1,6 @@
+[submodule "renode"]
+	path = renode
+	url = https://github.com/renode/renode.git
+[submodule "renode-verilator-integration"]
+	path = renode-verilator-integration
+	url = https://github.com/antmicro/renode-verilator-integration.git

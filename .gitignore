@@ -1,0 +1,6 @@
+renode
+renode-verilator-integration
+sw/sc-dt
+sw/build
+build
+.vscode
