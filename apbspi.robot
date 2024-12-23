@@ -21,7 +21,7 @@ Resource        ${RENODEKEYWORDS}
 # Starting emulation
 Should Run
     #Create Log Tester              ${LOG_TIMEOUT}
-    Execute Command                 mach create "yadro"
+    Execute Command                 mach create "apbspi"
     Execute Command                 machine LoadPlatformDescription @${PLATFORM_DESC}
     ${stdout}=  Execute Command     ${SYSBUS_MODULE} ConnectionParameters
     @{words} =  Split String    ${stdout}       ${SPACE} 
